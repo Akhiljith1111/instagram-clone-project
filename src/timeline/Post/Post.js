@@ -1,32 +1,45 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Post.css"
 import { Avatar } from '@mui/material'
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+// import BookmarkIcon from '@mui/icons-material/Bookmark';
+import CommentBox from './Components/Commentbox';
+
 
 function Post({user, postImage, likes, timestamp, id}) {
+  const [likeCount, setLikeCount] = useState(likes);
+  const [isLiked, setIsLiked] = useState(false);
 
-  // const [posts,setPosts] = useState([])
+  const [isCommentBoxOpen, setIsCommentBoxOpen] = useState(false);
 
-  // const handleLike = (Id) => {
-  //   const updatedPosts = posts.map((post) => {
-  //     if (post.id === Id) {
-  //       return { ...post, likes: {likes} + 1 }; // Increment the like count
-  //     }
-  //     return post;
-  //   });
-  //   setPosts(updatedPosts);
+  const handleLikeClick = () => {
+    if (isLiked) {
+      setLikeCount(likeCount - 1);
+    } else {
+      setLikeCount(likeCount + 1);
+    }
+    setIsLiked(!isLiked);
+  };
+
+  const handleCommentClick = () => {
+    setIsCommentBoxOpen(!isCommentBoxOpen);
+  };
+
+  // const handleAddComment = (postId, comment) => {
+   
   // };
 
 
   return (
+    
     <div className='post'>
       <div className="post__header">
         <div className="post__headerName">
-        <Avatar>{user.charAt(0).toUpperCase()}</Avatar> {user}• <span>{timestamp}</span>
+        <Avatar className='avatar__post'>{user.charAt(0).toUpperCase()}</Avatar> {user}• <span>{timestamp}</span>
         </div>
         <MoreHorizIcon className='post__more'/>
       </div>
@@ -38,15 +51,21 @@ function Post({user, postImage, likes, timestamp, id}) {
       <div className="post__footer">
         <div className='post__footerIcons'>
           <div className='post__mainIcons'>
-            <FavoriteBorderIcon className='postIcon'/>
-            <ChatBubbleOutlineIcon className='postIcon'/>
+            <FavoriteIcon
+             className={`postIcon ${isLiked ? 'liked' : ''}`}
+              onClick={handleLikeClick}
+            />
+            <ChatBubbleOutlineIcon className='postIcon'   onClick={handleCommentClick}/>
             <TelegramIcon className='postIcon'/>
           </div>
           <div className='post__saveIcon'>
             <BookmarkBorderIcon className='postIcon' />
           </div>
         </div>
-        Liked by {likes} people.
+        <span className="like-count">{likeCount} Likes</span>
+        {isCommentBoxOpen && (
+        <CommentBox postId={id} />
+      )}
       </div>
     </div>
   )

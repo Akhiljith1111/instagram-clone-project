@@ -1,0 +1,15 @@
+
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+
+/* .links__footer > Link {
+     font-size: 10px;
+     color: white;
+} */
+

@@ -1,34 +1,8 @@
-/* .sidenav {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1;
+
+
+.sidenav__full {
+  background-color: white;
 }
-
-.sidenav__logo {
-    width: 120px;
-    margin: 25px; 
-}
-
-.sidenav__buttons {
-    display: flex;
-    flex-direction: coloumn;
-}
-
-.sidenav__button {  
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: white;
-    background: 0;
-    border: 0;
-    margin: 5px 10px 5px 10px;
-    padding: 10px 15px 10px 15px;
-    border-radius: 15px;
-    width: 100%;
-} */
-
 
 .sidenav {
     position: fixed;
@@ -69,7 +43,6 @@
   .sidenav__button > span {
     font-size: 15px;
     font-weight: bolder;
-    /* font-style: italic; */
     margin-left: 10px;
   }
 
@@ -77,3 +50,56 @@
     position: fixed;
     bottom: 3px;
   }
+
+
+.menu-component {
+  position: absolute;
+  top: 420px;
+  left : 15px; 
+  background-color: #262626;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgb(26, 4, 4);
+  padding: 10px;
+  z-index: 1;
+  width: 200px; 
+}
+
+
+.menu__button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  width: 100%;
+  color: white;
+}
+
+.menu__button:hover {
+  background-color: grey;
+}
+
+
+.menu__button svg {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+
+.menu__button span {
+  font-size: 16px;
+  color: #f0f0f0;
+}
+
+
+.menu__first {
+  margin-bottom: 25px;
+}
+
+.menu__second {
+  border-top: 2px solid #ccc;
+  border-width: auto;
+  padding-top: 10px;
+}

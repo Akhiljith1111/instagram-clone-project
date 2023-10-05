@@ -1,6 +1,8 @@
 .post {
     width: 550px;
     margin: 30px 40px 50px 40px;
+    border-bottom: 1px solid grey;
+
 }
  
 .post__header{
@@ -9,6 +11,7 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
+    
 }
 
 .post__headerName{
@@ -16,6 +19,10 @@
     flex-direction: row;
     align-items: center;
     font-weight: bolder;
+}
+
+.avatar__post {
+    margin-right: 10px;
 }
 
 .post__headerName > span {
@@ -27,11 +34,9 @@
     width: 100%;
     border-radius: 6px;
     border: 1px solid white;
+
 }
 
-/* .post__footer {
-
-} */
 
 .post__more:hover{
     cursor: pointer;
@@ -55,3 +60,45 @@
     color: red;
 }
 
+
+.liked {
+    color: red;
+  }
+  
+  .like-count {
+    margin-left: 5px;
+  }
+
+
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .comment-box textarea {
+    resize: none;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-box button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comment-box button:hover {
+    background-color: #262626;
+  }
+  

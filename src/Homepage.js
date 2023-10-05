@@ -4,12 +4,14 @@ import Sidenav from './navigation/Sidenav'
 import Timeline from './timeline/Timeline'
 
 
+
 function Homepage() {
   return (
     <div className='homepage'>
      <div className="homepage__nav">
         <Sidenav />
      </div>
+
      <div className="homepage__timeline">
         <Timeline />
      </div>

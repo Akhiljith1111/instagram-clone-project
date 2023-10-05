@@ -1,4 +1,4 @@
-.sugesstions {
+/* .sugesstions {
     margin-top: 30px;
     margin-right: 20px;
 }
@@ -6,6 +6,7 @@
 .suggesstion__title {
     color: grey;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .username__left {
@@ -25,16 +26,26 @@
 
 .suggestion__name {
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between; 
     margin-top: 15px;
 }
 
-.follow__button {
+.follow__button,
+.see__button {
     color: #0095f6;
     font-weight: bold;
-    background: 0;
-    border: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.see__button {
+    color: white;
+}
+
+.see__button:hover {
+    color: grey;
+    cursor: pointer;
 }
 
 .username{
@@ -49,4 +60,80 @@
 .follow__button:hover {
     color: white;
     cursor: pointer;
+} */
+
+
+
+
+
+
+
+
+
+.suggestions {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.suggestion__title {
+    color: grey;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.username__left {
+    display: flex;
+    align-items: center;
+}
+
+.username__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.relation {
+    color: grey;
+    font-size: 12px;
+}
+
+.suggestion__name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.follow__button,
+.see__button {
+    color: #0095f6;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.see__button {
+    color: white;
+}
+
+.see__button:hover {
+    color: grey;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.avatar {
+    margin-right: 10px;
+}
+
+.follow__button:hover {
+    color: white;
+}
+
+.avatar__img{
+    height: 50px;
+    width: auto;
+    border-radius: 100px;
 }

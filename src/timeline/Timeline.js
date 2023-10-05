@@ -9,7 +9,7 @@ function Timeline() {
     {
       id: 1,
       user : "Vysakh",
-      postImage: "https://media.licdn.com/dms/image/C5103AQEKh1ro-iizew/profile-displayphoto-shrink_800_800/0/1557814686434?e=2147483647&v=beta&t=81KPrl41FwO5bwFbafZrOu0BOpA2PYY6_UDym_-Kd8o",
+      postImage: "https://media.licdn.com/dms/image/D5603AQG4bMX3oXhPYA/profile-displayphoto-shrink_800_800/0/1693677278741?e=1701302400&v=beta&t=yK0Xj06oJnSIbLG3V_1ho8VRcvzaGVNE3MhI8LZ3L4w",
       likes: 100000,
       timestamp: "12h",
     },
@@ -46,7 +46,7 @@ function Timeline() {
     <div className="timeline">
         <div className="timeline__left">
           <div className="timeline__posts">
-            {posts.map(post => (
+            { posts.map(post => (
               <Post 
               user={post.user} 
               postImage={post.postImage} 
